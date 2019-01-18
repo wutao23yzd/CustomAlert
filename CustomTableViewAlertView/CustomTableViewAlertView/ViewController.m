@@ -32,11 +32,11 @@
                    ];
     UIView* topBgView = [[UIView alloc]init];
     topBgView.backgroundColor = [UIColor orangeColor];
-    topBgView.frame = CGRectMake(0, 0, self.view.frame.size.width, 64);
+    topBgView.frame = CGRectMake(0, 0, self.view.frame.size.width, [UIApplication sharedApplication].statusBarFrame.size.height + 40);
     [self.view addSubview:topBgView];
     
     CGRect frame = self.view.bounds;
-    frame.origin.y += 64;
+    frame.origin.y += CGRectGetMaxY(topBgView.frame);
     self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

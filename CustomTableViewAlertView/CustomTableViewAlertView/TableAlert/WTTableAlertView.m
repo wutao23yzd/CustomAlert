@@ -370,7 +370,8 @@
 
 - (void)closeView:(WTTableAlertView *)view {
     [UIView animateWithDuration:0.3 animations:^{
-        view.bgView.alpha = 0;
+        //view.bgView.alpha = 0;
+        view.alpha = 0;
         [view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [view removeFromSuperview];
