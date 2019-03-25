@@ -15,7 +15,7 @@
 #define kContentViewW (WTMAINSCREEN_WIDTH * 0.8)
 #define kContentViewMaxH (WTMAINSCREEN_HEIGHT * 0.8)  //内容最大高度
 #define kTopViewHeight 50
-#define rowHeight  50   //定义tableView行高
+#define kWTRowHeight  50   //定义tableView行高
 #define kBottomViewStyleNormalH 80   //底部只有，取消和确定按钮
 
 @interface WTSelectionCell : UITableViewCell
@@ -272,7 +272,7 @@
         NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:self.topViewHConstraint?self.topViewHConstraint.constant : 0];
         NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:_contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
         NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:_contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
-        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:rowHeight * 4];  // 这个高度 仅仅起到占位的作用
+        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:kWTRowHeight * 4];  // 这个高度 仅仅起到占位的作用
         self.tableviewHConstraint = height;
         self.topViewHConstraint = top;
         NSArray *constantArr = @[top, left, right, height];
@@ -430,7 +430,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return rowHeight;
+    return kWTRowHeight;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -14,6 +14,7 @@
 		383F060C224884D500BBBE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383F060A224884D500BBBE04 /* LaunchScreen.storyboard */; };
 		383F060F224884D500BBBE04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 383F060E224884D500BBBE04 /* main.m */; };
 		383F061C2248855F00BBBE04 /* WTTableAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383F061A2248855E00BBBE04 /* WTTableAlertView.m */; };
+		383F062022489E7300BBBE04 /* WTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383F061F22489E7300BBBE04 /* WTAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		383F060E224884D500BBBE04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		383F061A2248855E00BBBE04 /* WTTableAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTTableAlertView.m; sourceTree = "<group>"; };
 		383F061B2248855E00BBBE04 /* WTTableAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTTableAlertView.h; sourceTree = "<group>"; };
+		383F061E22489E7300BBBE04 /* WTAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAlertView.h; sourceTree = "<group>"; };
+		383F061F22489E7300BBBE04 /* WTAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		383F05FE224884D400BBBE04 /* CustomAlert */ = {
 			isa = PBXGroup;
 			children = (
+				383F061D22489DCB00BBBE04 /* NormalAlert */,
 				383F06192248855E00BBBE04 /* TableAlert */,
 				383F05FF224884D400BBBE04 /* AppDelegate.h */,
 				383F0600224884D400BBBE04 /* AppDelegate.m */,
@@ -78,10 +82,19 @@
 		383F06192248855E00BBBE04 /* TableAlert */ = {
 			isa = PBXGroup;
 			children = (
-				383F061A2248855E00BBBE04 /* WTTableAlertView.m */,
 				383F061B2248855E00BBBE04 /* WTTableAlertView.h */,
+				383F061A2248855E00BBBE04 /* WTTableAlertView.m */,
 			);
 			path = TableAlert;
+			sourceTree = "<group>";
+		};
+		383F061D22489DCB00BBBE04 /* NormalAlert */ = {
+			isa = PBXGroup;
+			children = (
+				383F061E22489E7300BBBE04 /* WTAlertView.h */,
+				383F061F22489E7300BBBE04 /* WTAlertView.m */,
+			);
+			path = NormalAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383F062022489E7300BBBE04 /* WTAlertView.m in Sources */,
 				383F0604224884D400BBBE04 /* ViewController.m in Sources */,
 				383F060F224884D500BBBE04 /* main.m in Sources */,
 				383F0601224884D400BBBE04 /* AppDelegate.m in Sources */,
