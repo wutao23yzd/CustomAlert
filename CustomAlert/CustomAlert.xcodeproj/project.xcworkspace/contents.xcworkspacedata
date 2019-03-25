@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CustomTableViewAlertView.xcodeproj">
+      location = "self:CustomAlert.xcodeproj">
    </FileRef>
 </Workspace>

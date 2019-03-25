@@ -1,9 +1,9 @@
 //
 //  main.m
-//  CustomTableViewAlertView
+//  CustomAlert
 //
-//  Created by wutao on 2017/10/30.
-//  Copyright © 2017年 ttw. All rights reserved.
+//  Created by wutao on 2019/3/25.
+//  Copyright © 2019 wt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

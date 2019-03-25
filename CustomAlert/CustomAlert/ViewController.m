@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  CustomTableViewAlertView
+//  CustomAlert
 //
-//  Created by wutao on 2017/10/30.
-//  Copyright © 2017年 ttw. All rights reserved.
+//  Created by wutao on 2019/3/25.
+//  Copyright © 2019 wt. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -26,8 +26,8 @@
                      @"单选底部一个按钮",
                      @"单选隐藏顶部，且底部一个按钮"],
                    @[
-                     @"多选",
-                     @"多选选隐藏顶部"]
+                       @"多选",
+                       @"多选选隐藏顶部"]
                    
                    ];
     UIView* topBgView = [[UIView alloc]init];
@@ -65,12 +65,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     if (indexPath.section == 0) {
         
         switch (indexPath.row) {
             case 0:{
-                 NSArray* array = @[@"第一行", @"第二行", @"第三行",@"第四行", @"第五行", @"第六行",@"第七行", @"第八行", @"第九行",@"第十行", @"第十一行", @"第十二行"];
+                NSArray* array = @[@"第一行", @"第二行", @"第三行",@"第四行", @"第五行", @"第六行",@"第七行", @"第八行", @"第九行",@"第十行", @"第十一行", @"第十二行"];
                 WTTableAlertView* alertview = [WTTableAlertView initWithTitle:@"单选" options:array singleSelection:YES selectedItems:@[@(3)] completionHandler:^(NSArray * _Nullable options) {
                     for (id obj in options) {
                         NSLog(@"默认单选:%@", obj);
@@ -165,6 +165,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
