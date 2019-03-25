@@ -1,6 +1,6 @@
 ### CustomAlert
 -----
-本功能均 **参考了github某一demo写出**，代码轻量，用法简单。
+本功能在 **参考了github上其他开源项目**基础上，经过更改适配后，代码轻量，用法简单。包括**tableAlert**和普通**Alert**两种类型。
 #### CustomTableViewAlert自定义tableAlert
 -----
 ![img](https://github.com/wutao23yzd/CustomAlert/blob/master/showDemo.gif)
@@ -24,7 +24,7 @@ WTTableAlertView* alertview = [WTTableAlertView initWithTitle:@"单选" options:
 - 采用代码添加约束，可更改设置的值
 -----
 #### CustomAlert
-iOS原生的**UIAlertController**由于是全局的并且是一个控制器，因此在多人开发多个模块时时，容易造成意想不到的结果，这在开发SDK时，其弊端展示的尤为明显。由于这个这个原因，本文参考了github上的某一个Demo,以UIView的形式展示弹窗。并附带了多个功能。
+iOS原生的**UIAlertController**由于是全局的并且是一个控制器，因此在多人开发多个模块时时，容易造成意想不到的结果，这在开发SDK时，其弊端展示的尤为明显。由于这个这个原因，本示例以UIView的形式展示弹窗并将其添加到Window上。并附带了多个功能。
 ```
 WTAlertView* alertView = [[WTAlertView alloc] init];
 alertView.onButtonTouchUpInside = ^(WTAlertView * _Nonnull alertView, NSInteger buttonIndex) {
